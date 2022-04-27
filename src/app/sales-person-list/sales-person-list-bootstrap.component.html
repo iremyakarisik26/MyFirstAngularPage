@@ -1,0 +1,28 @@
+
+<table class="table table-hover" style="background-color:lavender">
+    <thead class="thead-dark">
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Ürün Özelliği</th>
+            <th>Ürün Fiyatı</th>
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let productlist of salesPersonList ">
+        <td style="color:black;">{{ productlist.productName }}</td>
+        <td style="color:black">{{ productlist.productDescription }}</td>
+        <td style="color: darkmagenta;">{{ productlist.productPrice}}</td>
+        
+        <td><button (click)="addToBasket()" style="color: plum; background-color: black; border-radius: 15px; font-style: inherit; font-family: Arial, Helvetica, sans-serif;">SEPETE EKLE </button></td>
+        
+        <td><button (click)="minusToBasket()" style="color: plum; background-color: black; border-radius: 15px; font-style: inherit; font-family: Arial, Helvetica, sans-serif;">SEPETTEN ÇIKAR </button></td>
+        
+    </tr>
+    </tbody>
+    <br>
+ 
+   
+</table>
